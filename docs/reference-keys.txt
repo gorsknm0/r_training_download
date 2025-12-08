@@ -3,6 +3,3 @@ part-pre-training-material
 setting-up-your-computer
 preparing-for-the-r-training
 running-r-code-in-the-console
-part-getting-started
-welcome
-review-your-r-training-prep
