@@ -1,0 +1,47 @@
+
+/* ===== Base palette (ForestPlots-like browns with strong contrast) ===== */
+:root {
+  --fp-brown-700: #4f3821;   /* primary dark brown for text/headings */
+  --fp-brown-600: #6b4f2c;   /* secondary brown for accents */
+  --fp-brown-500: #8c6f47;   /* lighter accent for captions */
+  --fp-ink-900:   #1f1f1f;   /* near-black for maximum contrast when needed */
+  --fp-bg-50:     #f7f3ee;   /* very light beige background for callouts/sidebar */
+  --fp-highlight: #b07a2a;   /* high-contrast highlight (golden-brown) */
+  --fp-focus:     #0b84ff;   /* vivid focus outline (blue) with excellent contrast */
+}
+
+/* Import a clean sans-serif font that reads well */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* ===== Headings in main content ===== */
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--fp-brown-700);          /* strong dark brown for high contrast */
+  letter-spacing: 0.2px;               /* subtle tracking aids legibility */
+}
+
+/* ===== Sidebar (TOC) base ===== */
+.book .book-summary {
+  background: #ffffff;                  /* keep white for maximum contrast */
+  border-right: none;
+}
+
+/* All TOC items (links + non-clickable spans) */
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li span {
+  color: var(--fp-brown-700);           /* high-contrast text color */
+  padding: 8px 15px;
+  font-weight: 600;                     /* heavier weight improves readability irrespective of color vision */
+  text-decoration: none;                /* baseline: no underline */
+}
+
+/* Hover state (add non-color cue: underline) */
+.book .book-summary ul.summary li a:hover {
+  text-decoration: underline;           /* visible cue that doesn't rely on color */
+}
+
+/* Active TOC item: strong left border + underline + color shift */
+.book .book-summary ul.summary li.active > a {
+  color: var(--fp-brown-600) !important;
+  border-left: 4px solid var(--fp-highlight);  /* high-contrast border cue */
+  padding-left: 11px !important;               /* compensate for border */
