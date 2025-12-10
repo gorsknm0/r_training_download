@@ -2,4 +2,3 @@ welcome-to-the-course
 part-pre-training-material
 setting-up-your-computer
 preparing-for-the-r-training
-running-r-code-in-the-console
